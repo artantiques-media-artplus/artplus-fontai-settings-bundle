@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        public: false
+
+    Fontai\Bundle\SettingsBundle\Service\Settings:
+        lazy: true
+
+    settings:
+        alias: Fontai\Bundle\SettingsBundle\Service\Settings
+        public: true
+
+    Fontai\Bundle\SettingsBundle\Twig\SettingsExtension:
+        arguments:
+            - '@Fontai\Bundle\SettingsBundle\Service\Settings'
+        tags:
+            - { name: twig.extension }

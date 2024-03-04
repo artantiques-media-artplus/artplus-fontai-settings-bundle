@@ -1,1 +1,2 @@
-# artplus-fontai-settings-bundle
+SettingsBundle
+==============

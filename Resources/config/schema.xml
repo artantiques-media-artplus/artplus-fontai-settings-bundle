@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" identifierQuoting="true" namespace="App\Model" package="src.Model">
+  <vendor type="mysql">
+    <parameter name="Engine" value="InnoDB" />
+  </vendor>
+  <behavior name="diff" />
+  <table name="settings">
+    <column name="id" type="integer" primaryKey="true" autoIncrement="true" required="true" />
+    <column name="is_hidden" type="boolean" required="true" defaultValue="false" />
+    <column name="property" type="varchar" size="100" required="true" primaryString="true" />
+    <column name="value" type="varchar" size="255" />
+    <column name="type" type="varchar" size="100" required="true" />
+    <column name="validation" type="varchar" size="255" />
+    <column name="units" type="varchar" size="20" />
+    <column name="description" type="longvarchar" />
+    <unique name="unique_property">
+      <unique-column name="property" />
+    </unique>
+  </table>
+</database>

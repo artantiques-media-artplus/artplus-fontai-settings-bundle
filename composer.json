@@ -1,0 +1,23 @@
+{
+    "name": "fontai/settings-bundle",
+    "type": "symfony-bundle",
+    "description": "Fontai SettingsBundle",
+    "authors": [
+        {
+            "name": "Lumír Toman",
+            "email": "toman@websource.cz"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "propel/propel-bundle": "~4.0@dev",
+        "fontai/propel2-diff-behavior": "*"
+    },
+    "autoload": {
+        "psr-4": { "Fontai\\Bundle\\SettingsBundle\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev"
+}
